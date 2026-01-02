@@ -12,7 +12,10 @@ import androidx.navigation.compose.rememberNavController
 import com.example.myfirebase.view.EntrySiswaScreen
 import com.example.myfirebase.view.HomeScreen
 
-
+@Composable
+fun DataSiswaApp(navController: NavHostController = rememberNavController(), modifier: Modifier = Modifier) {
+    HostNavigasi(navController = navController)
+}
 
 @Composable
 fun HostNavigasi(
