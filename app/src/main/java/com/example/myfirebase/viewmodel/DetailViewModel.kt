@@ -26,4 +26,8 @@ class DetailViewModel(
     private val repositorySiswa: RepositorySiswa
 ) : ViewModel() {
 
+    private val idSiswa: Long =
+        savedStateHandle.get<String>(DestinasiDetail.itemIdArg)?.toLong()
+            ?: error("idSiswa tidak ditemukan di SavedStateHandle")
+
 }
