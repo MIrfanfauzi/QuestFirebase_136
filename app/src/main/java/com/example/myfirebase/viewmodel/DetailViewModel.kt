@@ -2,6 +2,7 @@
 
 package com.example.myfirebase.viewmodel
 
+import DestinasiDetail
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -9,7 +10,6 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.myfirebase.modeldata.Siswa
-import com.example.myfirebase.repositori.AplikasiDataSiswa
 import com.example.myfirebase.repositori.RepositorySiswa
 import kotlinx.coroutines.launch
 import kotlinx.serialization.InternalSerializationApi
@@ -21,3 +21,9 @@ sealed interface StatusUIDetail {
     object Loading : StatusUIDetail
 }
 
+class DetailViewModel(
+    savedStateHandle: SavedStateHandle,
+    private val repositorySiswa: RepositorySiswa
+) : ViewModel() {
+
+}
